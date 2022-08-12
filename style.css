@@ -1,0 +1,625 @@
+@charset "UTF-8";
+.header_logo {
+  font-size: 25px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.header_img {
+  /* ==========スライダーのためのcss========== */
+  /*　背景画像設定　*/
+  /*矢印の設定*/
+  /*ドットナビゲーションの設定*/
+}
+
+.header_img-text {
+  position: absolute;
+  z-index: 999;
+  top: 15%;
+  left: 5%;
+  font-size: 35px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+.header_img .slider {
+  position: relative;
+  z-index: 1;
+  /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+  height: auto;
+  /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+.header_img .slider-item img {
+  width: 100%;
+  /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height: auto;
+  /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  background-repeat: no-repeat;
+  /*背景画像をリピートしない*/
+  background-position: center;
+  /*背景画像の位置を中央に*/
+  background-size: contain;
+  /*背景画像が.slider-item全体を覆い表示*/
+}
+
+.header_img .slick-prev,
+.header_img .slick-next {
+  position: absolute;
+  z-index: 3;
+  top: 42%;
+  cursor: pointer;
+  /*マウスカーソルを指マークに*/
+  outline: none;
+  /*クリックをしたら出てくる枠線を消す*/
+  border-top: 2px solid #fff;
+  /*矢印の色*/
+  border-right: 2px solid #fff;
+  /*矢印の色*/
+  height: 25px;
+  width: 25px;
+}
+
+.header_img .slick-prev {
+  /*戻る矢印の位置と形状*/
+  left: 2.5%;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.header_img .slick-next {
+  /*次へ矢印の位置と形状*/
+  right: 2.5%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.header_img .slick-dots {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: -50px 0 0 0;
+  /*ドットの位置*/
+}
+
+.header_img .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.header_img .slick-dots button {
+  color: transparent;
+  outline: none;
+  width: 8px;
+  /*ドットボタンのサイズ*/
+  height: 8px;
+  /*ドットボタンのサイズ*/
+  display: block;
+  border-radius: 50%;
+  background: #fff;
+  /*ドットボタンの色*/
+}
+
+.header_img .slick-dots .slick-active button {
+  background: #333;
+  /*ドットボタンの現在地表示の色*/
+}
+
+.header_menu {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.header_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 900px) {
+  .header_menu ul {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+.header_menu ul li {
+  width: 33%;
+  list-style: none;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.header_menu ul li a {
+  display: block;
+}
+
+@media screen and (min-width: 900px) {
+  .header_menu ul li {
+    margin: 0 20px;
+  }
+}
+
+.top_title {
+  text-align: center;
+}
+
+.top_title h3 {
+  text-align: left;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #000;
+  line-height: 1.5;
+}
+
+.top_text {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/*---/topここまで---*/
+.select {
+  margin-bottom: 80px;
+}
+
+.select_item_box {
+  padding: 5% 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+.select_item_box_title {
+  font-size: 1.4rem;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.select_item_box_img img {
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+.select_item_box_text {
+  font-size: 1.1rem;
+}
+
+.select_item_box_text p {
+  margin-top: 10px;
+}
+
+/*---/選ばれる理由ここまで---*/
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+body {
+  font-family: serif;
+  font-weight: 100;
+  color: #696C75;
+}
+
+body a {
+  color: #696C75;
+  text-decoration: none;
+}
+
+/* mainVisualから下の幅 */
+.inner {
+  width: 93%;
+  margin: 0 auto;
+}
+
+/* メインの見出し */
+.md_index {
+  font-size: 1.7rem;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.md_index p {
+  margin-bottom: 12px;
+}
+
+.md_index_sm {
+  font-size: 1.2rem;
+}
+
+/* read more */
+.read_more {
+  text-align: center;
+  border: solid 1px #000;
+  height: 20px;
+  line-height: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 8px 0;
+  border-radius: 3px;
+}
+
+.cust_voice {
+  margin-bottom: 80px;
+}
+
+.cust_voice_item_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.cust_voice_item_box_img {
+  width: 35%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.cust_voice_item_box_img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.cust_voice_item_box_text {
+  width: 65%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3%;
+  line-height: 1.5;
+}
+
+.blog {
+  margin-bottom: 80px;
+}
+
+.blog_item_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.blog_item_box_img {
+  width: 35%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.blog_item_box_img img {
+  width: 100%;
+}
+
+.blog_item_box_text {
+  width: 65%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3%;
+}
+
+.blog_item_box_text_title {
+  font-size: 1rem;
+  color: #000;
+  padding-bottom: 5px;
+}
+
+.blog_item_box_text_day {
+  font-size: 0.9rem;
+  padding-bottom: 20px;
+}
+
+.blog_item_box_text_content {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.work {
+  margin-bottom: 80px;
+}
+
+.work_flow_content {
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.work_flow_item_box {
+  margin-bottom: 50px;
+}
+
+.work_flow_item_box_index {
+  font-size: 1.3rem;
+  border-left: solid 5px #696C75;
+  padding: 10px 10px;
+  margin-bottom: 10px;
+}
+
+.work_flow_item_box_img img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.work_flow_item_box_text {
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.menu_item {
+  margin-bottom: 50px;
+}
+
+.menu_item_index {
+  font-size: 1.2rem;
+  border-bottom: solid 1px #000;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.menu_item_box {
+  border-bottom: dashed 1px #000;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.menu_item_box_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.menu_item_box_title_name {
+  font-size: 1.1rem;
+}
+
+.menu_item_box_title_money {
+  font-size: 1.1rem;
+}
+
+.menu_item_box_text {
+  line-height: 1.5;
+}
+
+.acces {
+  margin-bottom: 80px;
+}
+
+.acces_item {
+  margin-top: 60px;
+}
+
+.acces_item_text_index {
+  font-size: 1.5rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.acces_item_text_add ul li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.acces_item_map img {
+  width: 100%;
+}
+
+.reserve {
+  margin-bottom: 80px;
+}
+
+.reserve_item_box {
+  margin-bottom: 30px;
+}
+
+.reserve_item_box_text {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.reserve_item_box_bt {
+  text-align: center;
+  border: solid 1px #000;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
+.faq_box {
+  border-bottom: dashed 1px #000;
+  margin-bottom: 30px;
+}
+
+.faq_box_q {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.faq_box_q::before {
+  position: absolute;
+  content: "Q.";
+  left: -2rem;
+  font-size: 1.2rem;
+}
+
+.faq_box_a {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  line-height: 1.8;
+  position: relative;
+  margin-left: 2rem;
+}
+
+.faq_box_a::before {
+  position: absolute;
+  content: "A.";
+  left: -2rem;
+  font-size: 1.2rem;
+}
+
+.footer {
+  height: 200px;
+  background-color: #DEDADA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer_text {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.footer_icon {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.footer_icon::before {
+  content: "\f16d";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */
